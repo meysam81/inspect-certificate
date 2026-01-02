@@ -113,7 +113,7 @@ binary_signs:
       - "--yes"
     certificate: ${artifact}_{{- tolower .Os }}_{{- if eq .Arch "386" }}i386{{- else }}{{ .Arch }}{{ end }}{{- if .Arm }}v{{ .Arm }}{{ end }}.pem
     cmd: cosign
-    output: true
+    output: false
     signature: ${artifact}_{{- tolower .Os }}_{{- if eq .Arch "386" }}i386{{- else }}{{ .Arch }}{{ end }}{{- if .Arm }}v{{ .Arm }}{{ end }}.sig
 
 dockers_v2:
